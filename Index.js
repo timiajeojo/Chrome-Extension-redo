@@ -27,3 +27,16 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const database = getDatabase()
 const referenceInDB = ref(database, "leads")
+
+
+function render(leads) {
+let listItem = ""
+for (let i = 0; i < leads.length; i++) {
+ listItem += `<li>
+ <a href='${leads[i]}'>
+ ${leads[i]}
+ </a>
+ </li>`;
+}
+ulEl.innerHTML = listItem
+}
