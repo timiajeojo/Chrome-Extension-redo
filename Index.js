@@ -22,3 +22,8 @@ const firebaseConfig = {
     appId: "1:831225733252:web:6ad15e346540083a7ae2d1",
     measurementId: "G-TDMTME86HH"
   };
+
+
+const app = initializeApp(firebaseConfig)
+const database = getDatabase()
+const referenceInDB = ref(database, "leads")
