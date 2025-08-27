@@ -40,3 +40,12 @@ for (let i = 0; i < leads.length; i++) {
 }
 ulEl.innerHTML = listItem
 }
+
+onValue (referenceInDB, function(snapshot) {
+  const snapshotDoesExist = snapshot.exist
+  if (snapshotDoesExist) {
+    const snapshotValues = snapshot.val()
+ const leads = Object.values(snapshotValues)
+ render(leads)
+  }
+})
