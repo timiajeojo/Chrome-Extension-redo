@@ -49,3 +49,8 @@ onValue (referenceInDB, function(snapshot) {
  render(leads)
   }
 })
+
+deleteBtn.addEventListener("dblclick", function() {
+  remove(referenceInDB)
+  ulEl.innerHTML = " "
+})
