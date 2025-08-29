@@ -54,3 +54,12 @@ deleteBtn.addEventListener("dblclick", function() {
   remove(referenceInDB)
   ulEl.innerHTML = " "
 })
+
+
+inputBtn.addEventListener("click", function() {
+  push(referenceInDB, inputEl.value).then (() => {
+    console.log("Saved to Firebase ✅")}
+  )
+  inputEl.value = ""
+  
+})
